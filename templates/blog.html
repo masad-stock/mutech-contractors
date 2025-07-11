@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title %}Blog - Fundamental Design{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col-lg-8">
+    <h2 class="fw-bold text-gradient mb-4"><i class="fas fa-newspaper me-2"></i>Latest News & Insights</h2>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h4 class="card-title">Welcome to Our Blog!</h4>
+        <p class="card-text">Stay tuned for company news, project highlights, industry insights, and more. Our team will share updates and stories here regularly to keep you informed and inspired.</p>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h4 class="card-title">Innovations in Engineering: Shaping Kenya’s Future</h4>
+        <p class="card-text">Explore how cutting-edge engineering projects and technologies are transforming Kenya’s infrastructure and economy. Learn about our latest initiatives and success stories.</p>
+        <a href="#" class="btn btn-gradient-primary">Read More</a>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h4 class="card-title">Sustainable Design Practices for a Greener Tomorrow</h4>
+        <p class="card-text">Discover sustainable engineering and design strategies that reduce environmental impact and promote long-term growth. See how we integrate eco-friendly solutions in our projects.</p>
+        <a href="#" class="btn btn-gradient-primary">Read More</a>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h4 class="card-title">Community Engagement: Building Stronger Partnerships</h4>
+        <p class="card-text">Learn about our community outreach programs and partnerships that foster collaboration and support local development. See how we work together for mutual success.</p>
+        <a href="#" class="btn btn-gradient-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card shadow-sm mb-4">
+      <div class="card-body">
+        <h5 class="card-title text-gradient">Categories</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none">Company News</a></li>
+          <li><a href="#" class="text-decoration-none">Projects</a></li>
+          <li><a href="#" class="text-decoration-none">Tips & Insights</a></li>
+          <li><a href="#" class="text-decoration-none">Sustainability</a></li>
+          <li><a href="#" class="text-decoration-none">Community</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title text-gradient">Subscribe</h5>
+        <form>
+          <input type="email" class="form-control mb-2" placeholder="Your email" aria-label="Email for subscription">
+          <button class="btn btn-gradient-primary w-100" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

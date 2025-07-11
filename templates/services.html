@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block title %}Our Services - Fundamental Design{% endblock %}
+{% block content %}
+<h2 class="fw-bold text-gradient mb-4">Our Services</h2>
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+  <div class="col">
+    <div class="card h-100 border-0 shadow-sm text-center">
+      <div class="card-body">
+        <img src="/static/service-civil.jpg" alt="Civil Engineering" class="mb-3" width="60">
+        <h5 class="card-title">Civil Engineering</h5>
+        <p class="card-text">Roads, bridges, water supply, and infrastructure projects delivered with precision and innovation.</p>
+        <ul class="text-start small">
+          <li>Highways & rural roads</li>
+          <li>Bridge construction</li>
+          <li>Drainage & water systems</li>
+          <li>Urban infrastructure</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 border-0 shadow-sm text-center">
+      <div class="card-body">
+        <img src="/static/service-project.jpg" alt="Project Management" class="mb-3" width="60">
+        <h5 class="card-title">Project Management</h5>
+        <p class="card-text">Comprehensive project planning, supervision, and delivery for public and private sector clients.</p>
+        <ul class="text-start small">
+          <li>Feasibility studies</li>
+          <li>Cost estimation</li>
+          <li>Site supervision</li>
+          <li>Quality assurance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 border-0 shadow-sm text-center">
+      <div class="card-body">
+        <img src="/static/service-mechanical.jpg" alt="Mechanical & Electrical" class="mb-3" width="60">
+        <h5 class="card-title">Mechanical & Electrical Works</h5>
+        <p class="card-text">Design, installation, and maintenance of mechanical and electrical systems for buildings and industry.</p>
+        <ul class="text-start small">
+          <li>HVAC systems</li>
+          <li>Power distribution</li>
+          <li>Equipment installation</li>
+          <li>Maintenance contracts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 border-0 shadow-sm text-center">
+      <div class="card-body">
+        <img src="/static/service-procurement.jpg" alt="Procurement & Supply" class="mb-3" width="60">
+        <h5 class="card-title">Procurement & Supply</h5>
+        <p class="card-text">Efficient sourcing and supply of materials, equipment, and spare parts for all project needs.</p>
+        <ul class="text-start small">
+          <li>Supplier management</li>
+          <li>Inventory control</li>
+          <li>Quality assurance</li>
+          <li>Logistics & delivery</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="row mb-5">
+  <div class="col-md-6">
+    <h3 class="text-gradient">Our Process</h3>
+    <ol>
+      <li><strong>Consultation:</strong> We listen to your needs and assess project requirements.</li>
+      <li><strong>Design & Planning:</strong> Our experts create tailored solutions and detailed plans.</li>
+      <li><strong>Execution:</strong> Skilled teams deliver quality work, on time and on budget.</li>
+      <li><strong>Support:</strong> Ongoing maintenance and support for lasting value.</li>
+    </ol>
+  </div>
+  <div class="col-md-6 text-center">
+    <img src="/static/services-process.jpg" alt="Our Process" class="img-fluid rounded shadow">
+  </div>
+</div>
+<hr>
+<div class="alert alert-info text-center">
+  <strong>Looking for a custom solution?</strong> <a href="/contact" class="btn btn-gradient-primary ms-2">Contact Us</a>
+</div>
+{% endblock %}

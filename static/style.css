@@ -1,0 +1,348 @@
+:root {
+  --primary-blue: #003366;
+  --accent-green: #43cea2;
+  --highlight-gold: #ffe082;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+    color: #003366;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.site-title {
+  color: var(--primary-blue);
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+.site-title:hover,
+.site-title:focus {
+  color: var(--accent-green);
+  outline: none;
+}
+.site-location {
+    font-size: 1.1rem;
+    color: var(--accent-green);
+    font-weight: 500;
+}
+.bg-gradient-primary {
+    background: linear-gradient(90deg, #004080 60%, #00acc1 100%) !important;
+}
+.bg-gradient-header {
+  background: linear-gradient(90deg, #fff 60%, var(--accent-green) 100%);
+  border-bottom: 2px solid var(--primary-blue);
+}
+.bg-gradient-footer {
+    background: linear-gradient(90deg, #004080 60%, #ffcc00 100%) !important;
+    color: #fff;
+}
+.footer-divider {
+    border-top: 2px solid #ffe082;
+    opacity: 0.2;
+    margin: 0.5rem 0 1rem 0;
+}
+.navbar-nav {
+  gap: 2rem;
+}
+.navbar-nav .nav-link {
+  color: #00acc1 !important;
+  font-weight: 500;
+  background: transparent;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+  padding: 0.75rem 1.2rem;
+  font-size: 1.1rem;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+  color: #004080 !important;
+  background: #b2ebf2;
+  border-radius: 8px;
+}
+.display-4, .text-gradient {
+    background: linear-gradient(90deg, #004080 60%, #00acc1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.btn-gradient-primary {
+    background: linear-gradient(90deg, #004080 60%, #00acc1 100%);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 172, 193, 0.6);
+    transition: box-shadow 0.3s ease;
+}
+.btn-gradient-primary:hover {
+    background: linear-gradient(90deg, #00acc1 60%, #004080 100%);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(0, 172, 193, 0.8);
+}
+.btn-outline-gradient {
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+}
+.btn-outline-gradient:hover {
+  background: var(--accent-green);
+  color: #fff;
+}
+.btn-gradient-secondary {
+  background: linear-gradient(90deg, var(--highlight-gold) 60%, var(--accent-green) 100%);
+  color: #fff;
+  border: none;
+}
+.btn-gradient-secondary:hover {
+  background: linear-gradient(90deg, var(--accent-green) 60%, var(--highlight-gold) 100%);
+  color: #fff;
+}
+.card-title {
+    color: #004080;
+    font-weight: 600;
+}
+.card {
+    border: 2px solid #00acc1;
+    border-radius: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+.card:hover {
+    box-shadow: 0 6px 20px rgba(0, 172, 193, 0.4);
+}
+img.rounded-circle {
+    border: 4px solid #003366;
+}
+hr {
+    border-top: 2px solid #003366;
+    opacity: 0.1;
+}
+/* Department-specific gradients */
+.text-gradient-procurement, .border-gradient-procurement, .alert-gradient-procurement {
+    background: linear-gradient(90deg, #ffb347 60%, #ffcc33 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #ffb347;
+    border-color: #ffb347 !important;
+}
+.text-gradient-hr, .border-gradient-hr, .alert-gradient-hr {
+    background: linear-gradient(90deg, #43cea2 60%, #185a9d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #43cea2;
+    border-color: #43cea2 !important;
+}
+.text-gradient-accounts, .border-gradient-accounts, .alert-gradient-accounts {
+    background: linear-gradient(90deg, #ff6a00 60%, #ee0979 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #ff6a00;
+    border-color: #ff6a00 !important;
+}
+.text-gradient-engineering, .border-gradient-engineering, .alert-gradient-engineering {
+    background: linear-gradient(90deg, #00b4d8 60%, #0077b6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #00b4d8;
+    border-color: #00b4d8 !important;
+}
+.text-gradient-spareshop, .border-gradient-spareshop, .alert-gradient-spareshop {
+    background: linear-gradient(90deg, #f7971e 60%, #ffd200 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #f7971e;
+    border-color: #f7971e !important;
+}
+.text-gradient-mechanical-engineering, .border-gradient-mechanical-engineering, .alert-gradient-mechanical-engineering {
+    background: linear-gradient(90deg, #11998e 60%, #38ef7d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #11998e;
+    border-color: #11998e !important;
+}
+.text-gradient-financial-management, .border-gradient-financial-management, .alert-gradient-financial-management {
+    background: linear-gradient(90deg, #fc5c7d 60%, #6a82fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #fc5c7d;
+    border-color: #fc5c7d !important;
+}
+.text-gradient-sales-marketing, .border-gradient-sales-marketing, .alert-gradient-sales-marketing {
+    background: linear-gradient(90deg, #f7971e 60%, #ffd200 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #f7971e;
+    border-color: #f7971e !important;
+}
+.text-gradient-purchase-payables, .border-gradient-purchase-payables, .alert-gradient-purchase-payables {
+    background: linear-gradient(90deg, #00c3ff 60%, #ffff1c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #00c3ff;
+    border-color: #00c3ff !important;
+}
+.alert-gradient-procurement { background: linear-gradient(90deg, #ffb347 60%, #ffcc33 100%); color: #fff; border: none; }
+.alert-gradient-hr { background: linear-gradient(90deg, #43cea2 60%, #185a9d 100%); color: #fff; border: none; }
+.alert-gradient-accounts { background: linear-gradient(90deg, #ff6a00 60%, #ee0979 100%); color: #fff; border: none; }
+.alert-gradient-engineering { background: linear-gradient(90deg, #00b4d8 60%, #0077b6 100%); color: #fff; border: none; }
+.alert-gradient-spareshop { background: linear-gradient(90deg, #f7971e 60%, #ffd200 100%); color: #fff; border: none; }
+.alert-gradient-mechanical-engineering { background: linear-gradient(90deg, #11998e 60%, #38ef7d 100%); color: #fff; border: none; }
+.alert-gradient-financial-management { background: linear-gradient(90deg, #fc5c7d 60%, #6a82fb 100%); color: #fff; border: none; }
+.alert-gradient-sales-marketing { background: linear-gradient(90deg, #f7971e 60%, #ffd200 100%); color: #fff; border: none; }
+.alert-gradient-purchase-payables { background: linear-gradient(90deg, #00c3ff 60%, #ffff1c 100%); color: #222; border: none; }
+.border-gradient-procurement { border-color: #ffb347 !important; }
+.border-gradient-hr { border-color: #43cea2 !important; }
+.border-gradient-accounts { border-color: #ff6a00 !important; }
+.border-gradient-engineering { border-color: #00b4d8 !important; }
+.border-gradient-spareshop { border-color: #f7971e !important; }
+.border-gradient-mechanical-engineering { border-color: #11998e !important; }
+.border-gradient-financial-management { border-color: #fc5c7d !important; }
+.border-gradient-sales-marketing { border-color: #f7971e !important; }
+.border-gradient-purchase-payables { border-color: #00c3ff !important; }
+/* Make WhatsApp button larger and easier to tap on mobile */
+@media (max-width: 576px) {
+  .position-fixed.bottom-0.end-0.m-4.z-3 {
+    font-size: 2.5rem;
+    margin: 1rem !important;
+  }
+}
+
+/* Ensure feedback form and modal inputs are full width on mobile */
+@media (max-width: 576px) {
+  .footer-modern .form-control {
+    width: 100% !important;
+    margin-bottom: 0.5rem;
+  }
+}
+body.dark-mode {
+  background: #181a1b;
+  color: #e0e0e0;
+}
+body.dark-mode .bg-gradient-primary,
+body.dark-mode .bg-gradient-footer {
+  background: linear-gradient(90deg, #222 60%, #003366 100%) !important;
+}
+body.dark-mode .site-title,
+body.dark-mode .site-location,
+body.dark-mode .navbar-nav .nav-link,
+body.dark-mode .footer-modern {
+  color: #ffe082 !important;
+}
+body.dark-mode .card,
+body.dark-mode .form-control {
+  background: #222;
+  color: #e0e0e0;
+}
+body.dark-mode .btn-gradient-primary,
+body.dark-mode .btn-gradient-secondary {
+  background: linear-gradient(90deg, #003366 60%, #222 100%);
+  color: #ffe082;
+}
+
+/* Header improvements */
+.logo-hover {
+  transition: transform 0.3s ease;
+  height: 80px !important;
+  width: auto !important;
+}
+.logo-hover:hover,
+.logo-hover:focus {
+  transform: scale(1.1);
+  outline: none;
+}
+
+.site-title {
+  transition: color 0.3s ease;
+}
+.site-title:hover,
+.site-title:focus {
+  color: var(--accent-green);
+  outline: none;
+}
+
+.navbar-nav .nav-link {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link:focus {
+  outline: 3px solid var(--accent-green);
+  outline-offset: 2px;
+}
+
+.navbar-toggler {
+  transition: background-color 0.3s ease;
+}
+
+.navbar-toggler:focus {
+  outline: 3px solid var(--accent-green);
+  outline-offset: 2px;
+}
+
+#darkModeToggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#darkModeToggle i {
+  position: absolute;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease;
+}
+
+#darkModeToggle i.d-none {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#darkModeToggle[aria-pressed="true"] .fa-moon {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#darkModeToggle[aria-pressed="true"] .fa-sun {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Search form in navbar */
+.navbar .form-control {
+  width: 180px;
+  max-width: 100%;
+  border-radius: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar .form-control:focus {
+  box-shadow: 0 0 8px var(--accent-green);
+  outline: none;
+}
+
+.navbar .btn-outline-light {
+  border-radius: 20px;
+  padding: 0.375rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .btn-outline-light:hover,
+.navbar .btn-outline-light:focus {
+  background-color: var(--accent-green);
+  color: #003366;
+  outline: none;
+}
+
+/* Example: Dialogflow Messenger */

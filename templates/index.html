@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% block title %}Home - Fundamental Design{% endblock %}
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section position-relative d-flex align-items-center justify-content-center text-white mb-5" style="min-height: 90vh; background: url('/static/kenya-hero.jpg') center/cover no-repeat; border-radius: 1.5rem; overflow: hidden;">
+  <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(120deg, rgba(0,51,102,0.85) 60%, rgba(67,206,162,0.7) 100%);"></div>
+  <div class="container position-relative text-center py-5">
+    <img src="/static/logo.png" alt="Fundamental Design Logo" class="mb-4 hero-logo animate__animated animate__fadeInDown" style="max-width: 120px;">
+    <h1 class="display-2 fw-bold mb-3 animate__animated animate__fadeInUp">Engineering Kenya’s Future<br><span class="text-gradient">from Muranga</span></h1>
+    <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">Award-winning civil engineering and contracting, trusted across Kenya for quality, innovation, and integrity.</p>
+    <a href="#departments" class="btn btn-lg btn-gradient-primary shadow-lg px-5 animate__animated animate__fadeInUp animate__delay-2s">Explore Our Work</a>
+    <div class="mt-4 animate__animated animate__fadeInUp animate__delay-3s">
+      <img src="/static/iso-badge.jpg" alt="ISO Certified" class="me-2" style="height: 40px;">
+      <img src="/static/award-badge.png" alt="Award Winner" style="height: 40px;">
+    </div>
+    <div class="scroll-down-indicator mt-5 animate__animated animate__fadeInUp animate__delay-4s">
+      <span class="fs-1">&#8595;</span>
+      <div class="small">Scroll to discover more</div>
+    </div>
+  </div>
+</div>
+<!-- Why Choose Us -->
+<div class="row text-center mb-5">
+  <h2 class="mb-4 text-gradient">Why Choose Fundamental Design?</h2>
+  <div class="col-md-3 mb-3">
+    <div class="icon-box bg-gradient-primary text-white rounded-circle mb-2"><i class="bi bi-geo-alt-fill fs-2"></i></div>
+    <h5>Local Expertise</h5>
+    <p>Deep roots in Muranga and a strong understanding of Kenya’s construction landscape.</p>
+  </div>
+  <div class="col-md-3 mb-3">
+    <div class="icon-box bg-gradient-primary text-white rounded-circle mb-2"><i class="bi bi-lightbulb-fill fs-2"></i></div>
+    <h5>Innovation</h5>
+    <p>We use the latest technology and sustainable practices for every project.</p>
+  </div>
+  <div class="col-md-3 mb-3">
+    <div class="icon-box bg-gradient-primary text-white rounded-circle mb-2"><i class="bi bi-people-fill fs-2"></i></div>
+    <h5>Professional Team</h5>
+    <p>Multi-disciplinary experts dedicated to quality and client satisfaction.</p>
+  </div>
+  <div class="col-md-3 mb-3">
+    <div class="icon-box bg-gradient-primary text-white rounded-circle mb-2"><i class="bi bi-award-fill fs-2"></i></div>
+    <h5>Proven Track Record</h5>
+    <p>Successful delivery of major projects for both public and private sectors.</p>
+  </div>
+</div>
+<!-- Featured Projects -->
+<div class="mb-5">
+  <h2 class="mb-4 text-gradient">Featured Projects</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100 border-0 shadow-sm">
+        <img src="/static/project1.jpg" class="card-img-top" alt="Road Construction Muranga">
+        <div class="card-body">
+          <h5 class="card-title">Muranga Road Upgrade</h5>
+          <p class="card-text">A major road construction project improving connectivity and safety in Muranga County.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 border-0 shadow-sm">
+        <img src="/static/project2.jpg" class="card-img-top" alt="Water Project Kenya">
+        <div class="card-body">
+          <h5 class="card-title">Water Supply Initiative</h5>
+          <p class="card-text">Sustainable water infrastructure for rural communities in Central Kenya.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 border-0 shadow-sm">
+        <img src="/static/project3.jpg" class="card-img-top" alt="School Construction Kenya">
+        <div class="card-body">
+          <h5 class="card-title">Modern School Construction</h5>
+          <p class="card-text">Building safe, modern learning environments for the next generation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Departments (removed from homepage, now in navbar dropdown) -->
+<!-- Contact Form & Map -->
+<div class="row align-items-center mb-5">
+  <div class="col-md-6 mb-4 mb-md-0">
+    <h2 class="mb-3 text-gradient">Contact Us</h2>
+    <form action="#" method="post" class="bg-white p-4 rounded shadow-sm">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-gradient-primary">Send Message</button>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <h2 class="mb-3 text-gradient">Our Location</h2>
+    <div class="ratio ratio-16x9 rounded shadow-sm">
+      <iframe src="https://www.google.com/maps?q=Muranga,+Kenya&output=embed" allowfullscreen title="Muranga Office Location"></iframe>
+    </div>
+  </div>
+</div>
+{% endblock %}

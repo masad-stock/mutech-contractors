@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% block title %}{{ department.name }} - Fundamental Design{% endblock %}
+{% block content %}
+{% set dept_content = {
+    'procurement': {
+        'overview': 'The Procurement Department ensures the timely and cost-effective acquisition of materials, equipment, and services. We maintain strong relationships with suppliers and uphold transparency and compliance in all transactions.',
+        'services': ['Supplier management and evaluation', 'Contract negotiation', 'Inventory control', 'Quality assurance'],
+        'team': [
+            {'name': 'Jane Mwangi', 'role': 'Head of Procurement', 'img': '/static/team1.jpg'},
+            {'name': 'Samuel Kariuki', 'role': 'Procurement Officer', 'img': '/static/team2.jpg'}
+        ],
+        'projects': [
+            {'img': '/static/procurement1.jpg', 'desc': 'Bulk material sourcing for Muranga Road Project'},
+            {'img': '/static/procurement2.jpg', 'desc': 'Supplier audit and compliance review'}
+        ]
+    },
+    'hr': {
+        'overview': 'The Human Resources Department is the backbone of our company culture. We recruit, train, and support our diverse workforce, ensuring a safe, inclusive, and productive environment.',
+        'services': ['Talent acquisition', 'Employee relations', 'Training and development', 'Compliance and welfare'],
+        'team': [
+            {'name': 'Grace Wanjiru', 'role': 'HR Manager', 'img': '/static/team3.jpg'},
+            {'name': 'Peter Njoroge', 'role': 'HR Officer', 'img': '/static/team4.jpg'}
+        ],
+        'projects': [
+            {'img': '/static/hr1.jpg', 'desc': 'Staff wellness program launch'},
+            {'img': '/static/hr2.jpg', 'desc': 'Diversity and inclusion training'}
+        ]
+    },
+    'accounts': {
+        'overview': 'The Accounts Department manages all financial transactions, ensuring accuracy, transparency, and compliance with Kenyan regulations. We provide timely reporting and support strategic decision-making.',
+        'services': ['Bookkeeping', 'Payroll management', 'Financial reporting', 'Tax compliance'],
+        'team': [
+            {'name': 'Lucy Kamau', 'role': 'Chief Accountant', 'img': '/static/team5.jpg'},
+            {'name': 'James Mwaura', 'role': 'Accounts Assistant', 'img': '/static/team6.jpg'}
+        ],
+        'projects': [
+            {'img': '/static/accounts1.jpg', 'desc': 'Annual financial audit'},
+            {'img': '/static/accounts2.jpg', 'desc': 'Payroll system upgrade'}
+        ]
+    },
+    'engineering': {
+        'overview': 'Our Engineering Department delivers innovative and sustainable solutions for civil, structural, and infrastructure projects across Muranga and Kenya.',
+        'services': ['Project design and planning', 'Site supervision', 'Quality control', 'Sustainability consulting'],
+        'team': [
+            {'name': 'David Otieno', 'role': 'Lead Engineer', 'img': '/static/team7.jpg'},
+            {'name': 'Mary Wambui', 'role': 'Structural Engineer', 'img': '/static/team8.jpg'}
+        ],
+        'projects': [
+            {'img': '/static/engineering1.jpg', 'desc': 'Bridge construction supervision'},
+            {'img': '/static/engineering2.jpg', 'desc': 'Sustainable housing design'}
+        ]
+    },
+    'spareshop': {
+        'overview': 'The Spareshop Department provides a wide range of spare parts and equipment, supporting our projects and external clients with reliable, high-quality products.',
+        'services': ['Parts sourcing', 'Inventory management', 'Customer support', 'Technical advice'],
+        'team': [
+            {'name': 'Pauline Nduta', 'role': 'Spareshop Manager', 'img': '/static/team9.jpg'},
+            {'name': 'John Karanja', 'role': 'Inventory Specialist', 'img': '/static/team10.jpg'}
+        ],
+        'projects': [
+            {'img': '/static/spareshop1.jpg', 'desc': 'Rapid delivery for emergency repairs'},
+            {'img': '/static/spareshop2.jpg', 'desc': 'Inventory optimization project'}
+        ]
+    },
+    'mechanical-engineering': {
+        'overview': 'The Mechanical Engineering Department specializes in the design, installation, and maintenance of mechanical systems for construction and industrial projects.',
+        'services': ['System design', 'Equipment installation', 'Maintenance and repair', 'Technical consulting'],
+        'team': [
+            {'name': 'George Maina', 'role': 'Mechanical Engineer', 'img': '/static/team11.jpg'},
+            {'name': 'Susan Muthoni', 'role': 'Maintenance Lead', 'img': '/static/team12.jpg'}
+        ],
+        'projects': [
+            {'img': '/static/mechanical1.jpg', 'desc': 'Factory equipment installation'},
+            {'img': '/static/mechanical2.jpg', 'desc': 'Preventive maintenance program'}
+        ]
+    },
+    'financial-management': {
+        'overview': 'The Financial Management Department oversees budgeting, forecasting, and investment strategies, ensuring the company’s long-term growth and stability.',
+        'services': ['Budget planning', 'Financial analysis', 'Risk management', 'Investment planning'],
+        'team': [
+            {'name': 'Esther Njoki', 'role': 'Finance Manager', 'img': '/static/team13.jpg'},
+            {'name': 'Patrick Mwangi', 'role': 'Financial Analyst', 'img': '/static/team14.jpg'}
+        ],
+        'projects': [
+            {'img': '/static/finance1.jpg', 'desc': 'Strategic investment review'},
+            {'img': '/static/finance2.jpg', 'desc': 'Risk management workshop'}
+        ]
+    },
+    'sales-marketing': {
+        'overview': 'The Sales & Marketing Department drives business growth by building client relationships, promoting our services, and expanding our market presence in Muranga and Kenya.',
+        'services': ['Client acquisition', 'Brand management', 'Market research', 'Digital marketing'],
+        'team': [
+            {'name': 'Brian Ochieng', 'role': 'Sales Manager', 'img': '/static/team15.jpg'},
+            {'name': 'Mercy Chebet', 'role': 'Marketing Lead', 'img': '/static/team16.jpg'}
+        ],
+        'projects': [
+            {'img': '/static/sales1.jpg', 'desc': 'New client onboarding campaign'},
+            {'img': '/static/sales2.jpg', 'desc': 'Brand awareness event'}
+        ]
+    },
+    'purchase-payables': {
+        'overview': 'The Purchase and Payables Department manages all outgoing payments and ensures timely procurement of goods and services, supporting smooth project execution.',
+        'services': ['Vendor payments', 'Order processing', 'Expense tracking', 'Compliance checks'],
+        'team': [
+            {'name': 'Agnes Wairimu', 'role': 'Payables Manager', 'img': '/static/team17.jpg'},
+            {'name': 'Kelvin Mutua', 'role': 'Procurement Assistant', 'img': '/static/team18.jpg'}
+        ],
+        'projects': [
+            {'img': '/static/payables1.jpg', 'desc': 'Automated payment system rollout'},
+            {'img': '/static/payables2.jpg', 'desc': 'Vendor compliance audit'}
+        ]
+    }
+} %}
+<div class="row mb-4">
+    <div class="col-md-8">
+        <h2 class="fw-bold text-gradient-{{ department.slug }}">{{ department.name }}</h2>
+        <p class="lead">{{ dept_content[department.slug]['overview'] }}</p>
+        <hr>
+        <h4>Key Services</h4>
+        <ul>
+            {% for service in dept_content[department.slug]['services'] %}
+            <li>{{ service }}</li>
+            {% endfor %}
+        </ul>
+        <h4>Featured Projects</h4>
+        <div class="row row-cols-1 row-cols-md-2 g-3 mb-4">
+            {% for project in dept_content[department.slug]['projects'] %}
+            <div class="col">
+                <div class="card border-0 shadow-sm h-100">
+                    <img src="{{ project.img }}" class="card-img-top rounded" alt="{{ project.desc }}">
+                    <div class="card-body">
+                        <p class="card-text">{{ project.desc }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <h4>Meet the Team</h4>
+        <div class="row row-cols-2 row-cols-md-3 g-3 mb-4">
+            {% for member in dept_content[department.slug]['team'] %}
+            <div class="col text-center">
+                <img src="{{ member.img }}" class="rounded-circle mb-2" alt="{{ member.name }}" width="90" height="90">
+                <div class="fw-bold">{{ member.name }}</div>
+                <div class="text-muted small">{{ member.role }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        <h4>Contact This Department</h4>
+        <form action="#" method="post" class="bg-white p-3 rounded shadow-sm mb-4">
+            <div class="mb-2">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-2">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-2">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="2" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-gradient-primary">Send Message</button>
+        </form>
+    </div>
+    <div class="col-md-4 text-center">
+        <img src="https://source.unsplash.com/300x300/?{{ department.slug }},engineering,office" class="img-fluid rounded-circle shadow mb-3 border border-4 border-gradient-{{ department.slug }}" alt="{{ department.name }}">
+        <div class="alert alert-gradient-{{ department.slug }} mt-3">{{ department.name }} Department</div>
+    </div>
+</div>
+<a href="/" class="btn btn-gradient-secondary">&larr; Back to Home</a>
+{% endblock %}

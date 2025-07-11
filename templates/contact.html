@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Contact - Fundamental Design{% endblock %}
+{% block content %}
+<div class="row align-items-center mb-5">
+  <div class="col-md-6 mb-4 mb-md-0">
+    <h2 class="fw-bold text-gradient mb-3">Contact Us</h2>
+    <form action="#" method="post" class="bg-white p-4 rounded shadow-sm mb-4">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-gradient-primary">Send Message</button>
+    </form>
+    <div class="mb-4">
+      <h5 class="text-gradient">Frequently Asked Questions</h5>
+      <ul class="small">
+        <li><strong>Where are you located?</strong> We are based in Muranga, Kenya, and serve clients nationwide.</li>
+        <li><strong>How can I request a quote?</strong> Use the form above or email us at info@fundamentaldesign.co.ke.</li>
+        <li><strong>Do you offer internships?</strong> Yes, check our Careers page or contact HR for opportunities.</li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="text-gradient">Connect With Us</h5>
+      <a href="#" class="me-2"><img src="/static/icon-facebook.png" alt="Facebook" width="28"></a>
+      <a href="#" class="me-2"><img src="/static/icon-linkedin.png" alt="LinkedIn" width="28"></a>
+      <a href="#"><img src="/static/icon-twitter.png" alt="Twitter" width="28"></a>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h2 class="fw-bold text-gradient mb-3">Our Location</h2>
+    <div class="ratio ratio-16x9 rounded shadow-sm mb-3">
+      <iframe src="https://www.google.com/maps?q=Muranga,+Kenya&output=embed" allowfullscreen title="Muranga Office Location"></iframe>
+    </div>
+    <div class="mb-3">
+      <strong>Email:</strong> info@fundamentaldesign.co.ke<br>
+      <strong>Phone:</strong> +254 712 345678
+    </div>
+    <div class="alert alert-info">
+      <strong>Careers:</strong> Interested in joining our team? Email your CV to <a href="mailto:hr@fundamentaldesign.co.ke">hr@fundamentaldesign.co.ke</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
